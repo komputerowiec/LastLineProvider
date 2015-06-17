@@ -56,7 +56,7 @@ Every second (dstat by default returns metrics every second), left the value of 
 dstat -n --noheaders -N eth0 | awk '{print $2; fflush("/dev/stdout")}' | lastlineprovider -o /var/log/curr_eth0_out
 ```
 
-Every second, left in the file /var/lib/rtt_value the current RTT value measured against IP address 8.8.8.8:
+Every second, left in the file `/var/lib/rtt_value` the current RTT value measured against IP address 8.8.8.8:
 
 ```
 ping 8.8.8.8 | awk 'match($7, /[0-9]+.*/) {print substr($7, RSTART, RLENGTH); fflush("/dev/stdout")}' | lastlineprovider -o /var/lib/rtt_value
