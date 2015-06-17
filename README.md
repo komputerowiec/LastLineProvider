@@ -43,10 +43,10 @@ If set, before any new line is written to the `<output-file-path>` file, the fil
 No standard output, i.e. the lines read from the standard input are not copied to the standard output, so that only `<output-file-path>` file is being updated.
 
 `-s` <br />
-Sychronize each write to the `<output-file-path>`, i.e. call fsync() after each line is written.
+If set, the fsync() system call is called after every next line is written to the file `<output-file-path>`.
 
 `-m` <br />
-Matching only, i.e. rewrite to the standard output copy only lines matching the `<regex-filter>` filter (or all lines if the filter is not defined).
+Matching only, i.e. rewrite to the standard output only lines matching the `<regex-filter>` filter (or all lines if the filter is not defined).
 
 ## Examples
 
